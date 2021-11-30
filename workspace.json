@@ -1,4 +1,13 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "node": {
+      "root": "apps/node",
+      "targets": {
+        "tsCheck": {
+          "executor": "./tools/executors/tsCheck:tsCheck"
+        }
+      }
+    }
+  }
 }
