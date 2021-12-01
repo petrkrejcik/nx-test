@@ -52,7 +52,7 @@ function tscExecutor(_, context) {
                             : 'npx';
                     libRoot = context.workspace.projects[context.projectName].root;
                     return [4 /*yield*/, new Promise(function (resolve) {
-                            var child = child_process_1.spawn(packageManagerCmd, ['tsc', '-p', libRoot, '--noEmit'], {
+                            var child = child_process_1.spawn(packageManagerCmd, ['tsc', '-b', libRoot], {
                                 stdio: 'inherit'
                             });
                             child.on('data', function (args) { return console.log(args); });

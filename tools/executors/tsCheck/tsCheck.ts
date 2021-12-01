@@ -14,7 +14,7 @@ export default async function tscExecutor(_, context: ExecutorContext) {
   const libRoot = context.workspace.projects[context.projectName].root;
 
   const executionCode = await new Promise((resolve) => {
-    const child = spawn(packageManagerCmd, ['tsc', '-p', libRoot, '--noEmit'], {
+    const child = spawn(packageManagerCmd, ['tsc', '-b', libRoot], {
       stdio: 'inherit',
     });
     child.on('data', (args) => console.log(args));
